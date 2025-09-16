@@ -1,4 +1,4 @@
-package com.coliseumgym.academiaSystem;
+package com.coliseumgym.academiaSystem.entity;
 
 import jakarta.persistence.*;
 
