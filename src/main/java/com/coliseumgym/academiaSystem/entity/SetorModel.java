@@ -9,8 +9,14 @@ public class SetorModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
     private String nome_responsavel;
+
     private String nome_setor;
+
+    @OneToMany
+    @JoinColumn(name = "cadastros_id")
+    private UserModel userModel;
 
     public SetorModel(){
             }

@@ -13,6 +13,10 @@ public class UserModel {
     private String name;
     private String password;
 
+    @ManyToOne
+    @JoinColumn(name = "setores_id")
+    private SetorModel setor;
+
     public UserModel() {
     }
 
