@@ -1,9 +1,15 @@
 package com.coliseumgym.academiaSystem.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "tb_setor")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class SetorModel {
 
     @Id
@@ -18,27 +24,4 @@ public class SetorModel {
     @JoinColumn(name = "cadastros_id")
     private UserModel userModel;
 
-    public SetorModel(){
-            }
-
-    public SetorModel(String nome_responsavel, String nome_setor) {
-        this.nome_responsavel = nome_responsavel;
-        this.nome_setor = nome_setor;
-    }
-
-    public String getNome_responsavel() {
-        return nome_responsavel;
-    }
-
-    public void setNome_responsavel(String nome_responsavel) {
-        this.nome_responsavel = nome_responsavel;
-    }
-
-    public String getNome_setor() {
-        return nome_setor;
-    }
-
-    public void setNome_setor(String nome_setor) {
-        this.nome_setor = nome_setor;
-    }
 }

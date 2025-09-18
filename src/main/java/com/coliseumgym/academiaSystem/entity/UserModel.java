@@ -1,9 +1,15 @@
 package com.coliseumgym.academiaSystem.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "tb_cadastro")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class UserModel {
 
     @Id
@@ -16,37 +22,4 @@ public class UserModel {
     @ManyToOne
     @JoinColumn(name = "setores_id")
     private SetorModel setor;
-
-    public UserModel() {
-    }
-
-    public UserModel(String email, String name, String password) {
-        this.email = email;
-        this.name = name;
-        this.password = password;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 }
