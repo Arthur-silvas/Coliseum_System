@@ -1,13 +1,12 @@
 package com.coliseumgym.academiaSystem.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
 @Table(name = "tb_cadastro")
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class UserModel {
@@ -20,6 +19,6 @@ public class UserModel {
     private String password;
 
     @ManyToOne
-    @JoinColumn(name = "setores_id")
-    private SetorModel setor;
+    @JoinColumn(name = "setor_id")
+    private SetorModel setorModel;
 }
